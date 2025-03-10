@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Seccion fondo de pantalla */
+.overlay{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad si quieres ver el fondo */
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Asegura que esté por encima del fondo */
+}
+
+.bg{
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+}
+/* Seccion fondo de pantalla */
+
+/* Seccion Header*/
+.container_presen{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    box-sizing: content-box;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 10px;
+}
+
+.retrato{
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen_retrato{
+    display: flex;
+    width: 250px;
+    height: auto;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0px 0px 30px rgba(255, 136, 0, 0.5);
+
+}
+
+.textos_presen{
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.nombre_titulo{
+    font-size: 70px;
+    color: orange;
+    padding: 0;
+
+}
+
+.eslogan_titulo{
+    color: aqua;
+    font-size: 30px;
+}
+
+.sobre_mi{
+    display: flex;
+    flex-direction:column ;
+    z-index: 1;
+    font-style: italic;
+    align-items: center;
+    max-width: 450px;
+}
+
+.texto_sobre_mi{
+text-align: justify;
+}
+/* Seccion Header*/
+
+/* Seccion Proyectos */
+
+.proyectos_container{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.proyectos_titulo{
+    font-size: 40px;
+    z-index: 1;
+}
+
+.proyectos_tarjetas_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.Tarjeta{
+    display: flex;
+    height: 270px;
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.425);
+    z-index: 1;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.imagen_tarjeta{
+    display: flex;
+    color: black;
+    background-color: burlywood;
+    width: 85%;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.tarjeta_titulo{
+    color: black;
+
+}
+
+/* Seccion Proyectos */
