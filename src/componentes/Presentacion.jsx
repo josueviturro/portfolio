@@ -7,7 +7,7 @@ const Presentacion = () => {
 
         <div className="container_presen">
             <div className="retrato">
-                <img src="/imagenes/Imagen.webp" className="imagen_retrato" />
+                <img src="/imagenes/imagen.png" className="imagen_retrato" />
             </div>
             <div className="textos_presen">
                 <h3 className="nombre_titulo">Josué Viturro</h3>

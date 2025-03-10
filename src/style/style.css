@@ -53,14 +53,14 @@ html,body{
 
 .imagen_retrato{
     display: flex;
-    width: 250px;
-    height: auto;
+    width: 290px;
+    height: 290px;
     border-radius: 100%;
     object-fit: cover;
     border: 2px solid white;
     box-shadow: 0px 0px 30px rgba(255, 136, 0, 0.5);
-
-}
+    animation: fadeUp 1s ease-in-out;
+    }
 
 .textos_presen{
     display: flex;
@@ -69,6 +69,7 @@ html,body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    animation: fadeUp 2s ease-in-out;
 
 }
 
@@ -92,6 +93,7 @@ html,body{
     font-style: italic;
     align-items: center;
     max-width: 450px;
+    animation: fadeUp 3s ease-in-out;
 }
 
 .texto_sobre_mi{
@@ -203,6 +205,20 @@ text-align: justify;
     height: auto;
 }
 
-
-
 /* Seccion Enlaces */
+
+
+/* Animaciones */
+
+@keyframes fadeUp {
+    from{
+    opacity: 0;
+    transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animaciones */
