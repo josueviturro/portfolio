@@ -41,6 +41,7 @@ html,body{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    min-height: 100%;
     gap: 10px;
 }
 
@@ -60,6 +61,8 @@ html,body{
     border: 2px solid white;
     box-shadow: 0px 0px 30px rgba(255, 136, 0, 0.5);
     animation: fadeUp 1s ease-in-out;
+    
+    user-select: none;
     }
 
 .textos_presen{
@@ -69,7 +72,9 @@ html,body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    user-select: none;
     animation: fadeUp 2s ease-in-out;
+    
 
 }
 
@@ -94,7 +99,18 @@ html,body{
     align-items: center;
     max-width: 450px;
     animation: fadeUp 3s ease-in-out;
+    transition: all 1s ease-in-out;
 }
+
+.sobre_mi:hover{
+    scale: 1.6;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 25px;
+    transform: translateY(-50px);
+}
+
+
 
 .texto_sobre_mi{
 text-align: justify;
@@ -112,7 +128,8 @@ text-align: justify;
     gap: 30px;
     opacity: 0;
     transform: translateY(50px);
-    transition: all 2s ease-in-out
+    transition: all 2s ease-in-out;
+    
 }
 
 .proyectos_container.show{
@@ -177,6 +194,15 @@ text-align: justify;
     z-index: 3;
     margin-top: 80px;
     gap: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 2s ease-in-out;
+    
+}
+
+.links_container.show{
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .boton_link{
@@ -241,7 +267,16 @@ text-align: justify;
     background-color: rgba(59, 59, 59, 0.6);
     box-shadow: 0 0 20px  rgba(255, 134, 20, 1);
     align-items: end;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 2s ease-in-out;
+    
 
+}
+
+.footer_container.show{
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 .footer_bg{
@@ -265,7 +300,26 @@ text-align: justify;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    
+}
 
+.footer_texts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    padding: 10px 0;
+    border-radius: 25px;
+    box-shadow: 0 0 7px rgb(11, 214, 255);
+    transition: all 1s ease-in-out;
+}
+
+.footer_texts:hover{
+    box-shadow: 0 0 20px rgba(255, 136, 0, 0.5);
 }
 
 .footer_ul{
@@ -273,7 +327,8 @@ text-align: justify;
     list-style: none;
     gap: 5px;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
+    font-style: italic;
 }
 
 .footer_ul a{
@@ -299,7 +354,13 @@ text-align: justify;
     border-radius: 25px;
     border: 1px white solid;
     color: black;
+    box-shadow: 0 0 7px rgb(11, 214, 255);
+    transition: all 1s ease-in-out;
 
+}
+
+.form_container:hover{
+    box-shadow: 0 0 20px rgba(255, 136, 0, 0.5);
 }
 
 .footer_form_container form{

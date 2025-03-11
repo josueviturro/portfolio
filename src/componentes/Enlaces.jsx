@@ -1,10 +1,32 @@
-
+import { useEffect, useRef, useState } from "react";
 
 const Enlaces = () => {
 
+    const enlacesRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) =>{
+                if (entries[0].isIntersecting){
+                    setIsVisible(true)
+                }
+            },
+            {threshold: 0.1});
+        if(enlacesRef.current){
+            observer.observe(enlacesRef.current);
+        }
+
+        return() => {
+            if (enlacesRef.current){
+                observer.observe(enlacesRef.current);
+            }
+        }
+    }, [])
+
 
     return(
-        <div className="links_container">
+        <div ref={enlacesRef} className={`links_container ${isVisible ? "show" : ""}`}>
             <button className="boton_link">
                 <a href="https://github.com/josueviturro">
                     <div className="boton_content">

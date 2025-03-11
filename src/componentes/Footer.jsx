@@ -1,4 +1,4 @@
-import { useState} from "react"
+import { useState , useEffect , useRef} from "react"
 import emailjs from "emailjs-com"
 import Swal from "sweetalert2";
 
@@ -8,6 +8,27 @@ const Footer = () => {
     const [formData, setFormData] = useState({ nombre: "", email: "", mensaje: "" });
     const [mensajeEnviado, setMensajeEnviado] = useState(false);
     const [loading, setLoading] = useState(false);
+    const footer = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) =>{
+                if (entries[0].isIntersecting){
+                    setIsVisible(true)
+                }
+            },
+            {threshold: 0.1});
+        if(footer.current){
+            observer.observe(footer.current);
+        }
+
+        return() => {
+            if (footer.current){
+                observer.observe(footer.current);
+            }
+        }
+    }, [])
 
 
 
@@ -94,15 +115,17 @@ const Footer = () => {
 
 
     return(
-    <div className="footer_container">
+    <div ref={footer} className={`footer_container ${isVisible ? "show" : ""}`}>
         <div className="footer_bg">
             <div className="footer_links_container">
-                <h2 className="footer_links_titulo">Informacion util</h2>
-                <ul className="footer_ul">
-                    <li>Email: Josueviturro@gmail.com</li>
-                    <li>Linkedin: <a href="https://www.linkedin.com/in/josue-viturro/">Click Aqui!</a></li>
-                    <li>GitHub: <a href="https://github.com/josueviturro">Click Aqui!</a></li>
-                </ul>
+                <div className="footer_texts">
+                    <h2 className="footer_links_titulo">Informacion util</h2>
+                    <ul className="footer_ul">
+                        <li>Email: Josueviturro@gmail.com</li>
+                        <li>Linkedin: <a href="https://www.linkedin.com/in/josue-viturro/">Click Aqui!</a></li>
+                        <li>GitHub: <a href="https://github.com/josueviturro">Click Aqui!</a></li>
+                    </ul>
+                </div>
             </div>
             <div className="footer_form_container">
                 <div className="form_container">
