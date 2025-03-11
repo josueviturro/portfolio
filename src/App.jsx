@@ -2,6 +2,7 @@ import Background from "./componentes/Background"
 import Presentacion from "./componentes/Presentacion"
 import Proyectos from "./componentes/Proyectos"
 import Enlaces from "./componentes/Enlaces"
+import Footer from "./componentes/Footer"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Presentacion />
       <Proyectos/>
       <Enlaces/>
+      <Footer/>
     </>
   )
 }
