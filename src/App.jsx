@@ -4,6 +4,7 @@ import Proyectos from "./componentes/Proyectos"
 import Enlaces from "./componentes/Enlaces"
 import Footer from "./componentes/Footer"
 import Carga from "./componentes/Carga"
+import Techs from "./componentes/Techs"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Carga/>
       <Background />
       <Presentacion />
+      <Techs/>
       <Proyectos />
       <Enlaces />
       <Footer />

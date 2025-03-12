@@ -16,7 +16,7 @@ const Presentacion = () => {
             </div>
             <div className="sobre_mi">
                 <h2>Sobre mi:</h2>
-                <p className="texto_sobre_mi">"Soy desarrollador Frontend con experiencia en HTML, CSS, JavaScript, React, Electron y Python. Me apasiona crear soluciones innovadoras y formar parte de equipos dinámicos donde pueda aportar mis habilidades técnicas. Actualmente, estoy cursando la carrera de Ingeniería en Informática en la Universidad Nacional Arturo Jauretche. Busco seguir creciendo profesionalmente, participando en todas las etapas del desarrollo de software y aprendiendo de cada proyecto."</p>
+                <p className="texto_sobre_mi">"Soy desarrollador Frontend con experiencia en HTML, CSS, JavaScript, React, Electron y Python. Me apasiona crear soluciones innovadoras y trabajar en equipos dinámicos donde pueda aportar mis conocimientos y seguir aprendiendo. Actualmente, estudio Ingeniería en Informática en la Universidad Nacional Arturo Jauretche, con la intención de crecer profesionalmente y participar en todas las etapas del desarrollo de software. Desde chico, la tecnología siempre me llamó la atención. No solo me fascinaba lo que veía en las pantallas, sino que también sentía curiosidad por entender cómo funcionaba todo por detrás. Esa inquietud, que empezó como un simple hobby, con el tiempo se convirtió en una necesidad de profundizar en el desarrollo y hacer de esto mi profesión. Hoy, mi objetivo es seguir explorando y creando lo que hay detrás del "telón" digital."</p>
             </div>
         </div>
     )

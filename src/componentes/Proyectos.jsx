@@ -20,7 +20,7 @@ const Proyectos = () => {
 
         return() => {
             if (proyectosRef.current){
-                observer.observe(proyectosRef.current);
+                observer.unobserve(proyectosRef.current);
             }
         }
     }, [])

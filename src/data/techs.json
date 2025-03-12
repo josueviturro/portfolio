@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "imagen":"/icons/HTML.png",
+        "titulo": "HTML"
+    },
+    {
+        "id": 2,
+        "imagen":"/icons/CSS.png",
+        "titulo": "CSS"
+    },
+    {
+        "id": 3,
+        "imagen":"/icons/JS.png",
+        "titulo": "JAVASCRIPT"
+    },
+    {
+        "id": 4,
+        "imagen":"/icons/REACT.png",
+        "titulo": "REACT"
+    },
+    {
+        "id": 5,
+        "imagen":"/icons/ELECTRON.png",
+        "titulo": "ELECTRON"
+    },
+    {
+        "id": 6,
+        "imagen":"/icons/PYTHON.png",
+        "titulo": "PYTHON"
+    },
+    {
+        "id": 7,
+        "imagen":"/icons/VITE.png",
+        "titulo": "VITE"
+    }
+]
