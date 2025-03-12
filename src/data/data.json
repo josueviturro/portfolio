@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "titulo": "Skull Hair",
+        "descripcion": "Portal de de ventas de productos de estetica en general.",
+        "imagen":{"nombre": "SkullHair", "foto":"/imagenes/skull_hair_web.png"},
+        "tecnologias": [
+            {"nombre": "html", "icono": "/icons/HTML.png"},
+            {"nombre": "css", "icono": "/icons/CSS.png"},
+            {"nombre": "javascript", "icono": "/icons/JS.png"},
+            {"nombre": "react", "icono": "/icons/REACT.png"}
+        ]
+    },
+    {
+        "id": 2,
+        "titulo": "Skull Hair",
+        "descripcion": "Portal de de ventas de productos de estetica en general.",
+        "imagen":{"nombre": "SkullHair", "foto":"/imagenes/skull_hair_web.png"},
+        "tecnologias": [
+            {"nombre": "html", "icono": "/icons/HTML.png"},
+            {"nombre": "css", "icono": "/icons/CSS.png"},
+            {"nombre": "javascript", "icono": "/icons/JS.png"},
+            {"nombre": "react", "icono": "/icons/REACT.png"}
+        ]
+    },
+    {
+        "id": 3,
+        "titulo": "Skull Hair",
+        "descripcion": "Portal de de ventas de productos de estetica en general.",
+        "imagen":{"nombre": "SkullHair", "foto":"/imagenes/skull_hair_web.png"},
+        "tecnologias": [
+            {"nombre": "html", "icono": "/icons/HTML.png"},
+            {"nombre": "css", "icono": "/icons/CSS.png"},
+            {"nombre": "javascript", "icono": "/icons/JS.png"},
+            {"nombre": "react", "icono": "/icons/REACT.png"}
+        ]
+    }
+]

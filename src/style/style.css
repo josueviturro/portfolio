@@ -153,15 +153,27 @@ text-align: justify;
 }
 
 .Tarjeta{
+    gap: 5px;
+    padding: 20px;
     display: flex;
-    height: 270px;
-    width: 450px;
-    background-color: rgba(255, 255, 255, 0.425);
-    z-index: 1;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 0;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+}
+
+.Tarjeta:hover{
+    z-index: 3;
+}
+
+.imagen_tarjeta:hover{
+    box-shadow: 0 0 20px rgba(255, 136, 1);
+    scale: 1.5;
+    opacity: 1;
 }
 
 
@@ -174,12 +186,41 @@ text-align: justify;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    box-shadow: 0 0 7px rgb(11, 214, 255);
+    transition: all 0.5s ease-in-out;
 }
+
+
+
 
 .tarjeta_titulo{
     color: black;
+}
+
+.tarjeta_descripcion{
+    color: black;
+    font-style: italic;
+    text-align: center;
+}
+
+.tarjetas_techs{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tarjeta_tech_icono{
+    display: flex;
+    width: 50px;
+}
+
+.tarjeta_tech_icono:hover{
+    animation: upBottom 1s infinite ease-in-out;
 
 }
+
 /* Seccion Proyectos */
 
 
@@ -437,5 +478,3 @@ text-align: justify;
     border-radius: 15px !important; /* 🔥 Redondea los bordes del modal */
 }
 /* Custom alert*/
-
-/*hola mundo/

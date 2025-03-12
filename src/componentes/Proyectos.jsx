@@ -32,8 +32,6 @@ const Proyectos = () => {
             <h1 className="proyectos_titulo">Desarrollos</h1>
             <div className="proyectos_tarjetas_container">
                 <Tarjetas/>
-                <Tarjetas/>
-                <Tarjetas/>
             </div>
         </div>
     )
