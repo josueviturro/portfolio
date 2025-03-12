@@ -215,8 +215,14 @@ text-align: justify;
     justify-content: center;
     border-radius: 5px;
     box-shadow: 0 0 7px rgb(11, 214, 255);
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
     box-sizing: border-box;
+}
+
+.link_tarjeta{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 

@@ -9,7 +9,8 @@
             {"nombre": "css", "icono": "/icons/CSS.png"},
             {"nombre": "javascript", "icono": "/icons/JS.png"},
             {"nombre": "react", "icono": "/icons/REACT.png"}
-        ]
+        ],
+        "link":"https://idyllic-starship-7abcd0.netlify.app/"
     },
     {
         "id": 2,
@@ -21,7 +22,8 @@
             {"nombre": "css", "icono": "/icons/CSS.png"},
             {"nombre": "javascript", "icono": "/icons/JS.png"},
             {"nombre": "react", "icono": "/icons/REACT.png"}
-        ]
+        ],
+        "link":"https://idyllic-starship-7abcd0.netlify.app/"
     },
     {
         "id": 3,
@@ -33,6 +35,7 @@
             {"nombre": "css", "icono": "/icons/CSS.png"},
             {"nombre": "javascript", "icono": "/icons/JS.png"},
             {"nombre": "react", "icono": "/icons/REACT.png"}
-        ]
+        ],
+        "link":"https://idyllic-starship-7abcd0.netlify.app/"
     }
 ]
