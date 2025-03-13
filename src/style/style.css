@@ -75,6 +75,7 @@ html,body{
     z-index: 1;
     align-items: center;
     justify-content: center;
+
 }
 
 .imagen_retrato{
@@ -83,7 +84,7 @@ html,body{
     height: 290px;
     border-radius: 100%;
     object-fit: cover;
-    border: 2px solid white;
+    border: px solid rgb(201, 201, 201);
     box-shadow: 0px 0px 30px rgba(255, 136, 0, 0.5);
     animation: fadeUp 1s ease-in-out;
     animation-delay: 5s;
@@ -251,11 +252,10 @@ text-align: justify;
     padding: 20px;
     display: flex;
     width: 500px;
-    min-height: 370px;
+    height: 500px;
     background-color: rgba(255, 255, 255, 0.4);
     z-index: 0;
     border-radius: 5px;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
@@ -266,11 +266,10 @@ text-align: justify;
     z-index: 3;
 }
 
-.imagen_tarjeta:hover{
+.link_tarjeta:hover .imagen_tarjeta{
     box-shadow: 0 0 20px rgba(255, 136, 1);
-    scale: 1.5;
     opacity: 1;
-    max-width: 70%;
+    scale: 1.3;
 }
 
 
@@ -278,13 +277,13 @@ text-align: justify;
     display: flex;
     color: black;
     background-color: burlywood;
-    width: 85%;
-    height: 70%;
+    width: 100%;
+    height: 250px;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
     box-shadow: 0 0 7px rgb(11, 214, 255);
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in;
     box-sizing: border-box;
 }
 
@@ -297,19 +296,20 @@ text-align: justify;
 
 .tarjeta_titulo{
     color: black;
+    text-align: justify;
 }
 
 .tarjeta_descripcion{
     color: black;
     font-style: italic;
-    text-align: center;
+    text-align: justify;
 }
 
 .tarjetas_techs{
     display: flex;
     width: 100%;
-    height: 20%;
-    align-items: center;
+    height: 100%;
+    align-items: end;
     justify-content: space-evenly;
 }
 

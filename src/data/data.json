@@ -2,40 +2,32 @@
     {
         "id": 1,
         "titulo": "Skull Hair",
-        "descripcion": "Portal de de ventas de productos de estetica en general.",
+        "descripcion": "Portal de ventas de productos de estética. La página explica el método de compra y pago, permite buscar, filtrar y seleccionar productos, y muestra el precio total según la cantidad. Aún no cuenta con el botón de pago debido a cuestiones de configuracion de la cuenta receptora.",
         "imagen":{"nombre": "SkullHair", "foto":"/imagenes/skull_hair_web.png"},
         "tecnologias": [
             {"nombre": "html", "icono": "/icons/HTML.png"},
             {"nombre": "css", "icono": "/icons/CSS.png"},
             {"nombre": "javascript", "icono": "/icons/JS.png"},
-            {"nombre": "react", "icono": "/icons/REACT.png"}
+            {"nombre": "react", "icono": "/icons/REACT.png"},
+            {"nombre": "vite", "icono": "/icons/VITE.png"}
         ],
         "link":"https://idyllic-starship-7abcd0.netlify.app/"
     },
     {
         "id": 2,
-        "titulo": "Skull Hair",
-        "descripcion": "Portal de de ventas de productos de estetica en general.",
-        "imagen":{"nombre": "SkullHair", "foto":"/imagenes/skull_hair_web.png"},
+        "titulo": "Tecno Ley",
+        "descripcion": "Plataforma donde se crean las actas de aperturas de estupefacientes de Policia cientifica de policia de la ciudad, se llenan los datos y se crea el acta, no se puede acceder por cuestiones de privacidad.",
+        "imagen":{"nombre": "Tecno ley", "foto":"/imagenes/tecno_ley.png"},
         "tecnologias": [
             {"nombre": "html", "icono": "/icons/HTML.png"},
             {"nombre": "css", "icono": "/icons/CSS.png"},
             {"nombre": "javascript", "icono": "/icons/JS.png"},
-            {"nombre": "react", "icono": "/icons/REACT.png"}
+            {"nombre": "react", "icono": "/icons/REACT.png"},
+            {"nombre": "vite", "icono": "/icons/VITE.png"},
+            {"nombre": "electron", "icono": "/icons/ELECTRON.png"}
+
         ],
-        "link":"https://idyllic-starship-7abcd0.netlify.app/"
-    },
-    {
-        "id": 3,
-        "titulo": "Skull Hair",
-        "descripcion": "Portal de de ventas de productos de estetica en general.",
-        "imagen":{"nombre": "SkullHair", "foto":"/imagenes/skull_hair_web.png"},
-        "tecnologias": [
-            {"nombre": "html", "icono": "/icons/HTML.png"},
-            {"nombre": "css", "icono": "/icons/CSS.png"},
-            {"nombre": "javascript", "icono": "/icons/JS.png"},
-            {"nombre": "react", "icono": "/icons/REACT.png"}
-        ],
-        "link":"https://idyllic-starship-7abcd0.netlify.app/"
+        "link": null
     }
+
 ]

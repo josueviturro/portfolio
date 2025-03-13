@@ -27,7 +27,7 @@ const Techs = () => {
 
     return(
     <div ref={techsRef}  className={`techs-container ${isVisible ? "show" : ""}`}>
-        <h1>Tecnologias que uso</h1>
+        <h1>Habilidades</h1>
         <div className="techs_bg">
             {tech.map((e) => (
                 <div key={e.id} className="tech_card">
