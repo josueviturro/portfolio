@@ -62,12 +62,12 @@ html,body{
     display: flex;
     box-sizing: border-box;
     justify-content: center;
-    box-sizing: content-box;
+    box-sizing: border-box;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    min-height: 100%;
+    min-height: 100vh;
     gap: 10px;
+    padding-top: 20px;
 }
 
 .retrato{
