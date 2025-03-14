@@ -5,12 +5,14 @@ import Enlaces from "./componentes/Enlaces"
 import Footer from "./componentes/Footer"
 import Carga from "./componentes/Carga"
 import Techs from "./componentes/Techs"
+import Wp_icon from "./componentes/Wp"
 
 function App() {
 
 
   return (
     <>
+      <Wp_icon/>
       <Carga/>
       <Background />
       <Presentacion />

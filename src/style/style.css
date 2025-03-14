@@ -14,6 +14,8 @@ html,body{
 }
 
 
+
+
 .carga {
     position: fixed;
     width: 100%;
@@ -38,6 +40,32 @@ html,body{
 .carga_texto{
     animation: upBottom2 1s infinite ease-in-out;
 }
+
+/* Seccion icono de WP */
+
+.wp_container{
+    bottom: 3%;
+    right: 2%;
+    position: fixed;
+    z-index: 1;
+    width: 50px;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+}
+
+.wp_container:hover{
+    scale:1.3;
+    animation: upBottom 1s infinite ease-in-out;
+}
+
+.wp_img{
+    width: 100%;
+}
+
+
+
+
+/* Seccion icono de WP */
 
 /* Seccion fondo de pantalla */
 .overlay{
