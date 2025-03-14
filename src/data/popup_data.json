@@ -1,0 +1,26 @@
+[
+    {   
+        "id": 1,
+        "nombre": "whastapp",
+        "imagen": "/icons/WP.png",
+        "link": "https://wa.me/5491156242579"
+    },
+    {   
+        "id": 2,
+        "nombre": "Github",
+        "imagen": "/imagenes/github.png",
+        "link": "https://github.com/josueviturro"
+    },
+    {   
+        "id": 3,
+        "nombre": "Linkedin",
+        "imagen": "/imagenes/linkedin.png",
+        "link": "https://www.linkedin.com/in/josue-viturro/"
+    },
+    {   
+        "id": 4,
+        "nombre": "Curriculum",
+        "imagen": "/icons/CV.png",
+        "link": "https://raw.githubusercontent.com/josueviturro/portfolio/main/public/CV_Viturro_Josue.pdf"
+    }
+]
