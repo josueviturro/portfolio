@@ -1,5 +1,8 @@
 # 🚀 Portfolio Personal - Josué Viturro
 
+<img width="1156" height="411" alt="image" src="https://github.com/user-attachments/assets/e40bf1b9-b887-4a50-8c1d-52893612c6c2" />
+
+
 Bienvenido al repositorio de mi portfolio web. Este sitio interactivo fue diseñado y desarrollado desde cero para exhibir mis proyectos de software, mi stack tecnológico y mi enfoque para resolver problemas mediante código limpio.
 
 ## 💻 Tecnologías Utilizadas en este Proyecto
