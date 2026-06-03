@@ -1,4 +1,5 @@
 import './PortfolioPage.css'
+import emailjs from '@emailjs/browser';
 import icoreact from '../../assets/icons/REACT.png'
 import icohtml from '../../assets/icons/HTML.png'
 import icocss from '../../assets/icons/CSS.png'
@@ -10,7 +11,11 @@ import icocshare from "../../assets/icons/cshare.png"
 import imagen from '../../assets/images/imagen.png'
 import misionseg from '../../assets/images/proyectimages/misionsegLogo.png'
 import alphagestion from '../../assets/images/proyectimages/alphagestion.png'
-import { useRef , useEffect} from "react";
+import linkedin from '/linkedin.png'
+import github from '/github.png'
+import { useEffect, useRef, useState, type FormEvent } from "react";
+
+
 
 type Skill = {
 	name: string
@@ -55,8 +60,13 @@ const projects: Project[] = [
 
 export default function PortfolioPage() {
 
+	const [name, setName] = useState<string>('') || null;
+	const [email, setEmail] = useState<string>('') || null;
+	const [message, setMessage] = useState<string>('') || null;
+
 
 const containerRef = useRef<HTMLDivElement | null>(null);
+const formRef = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -74,6 +84,43 @@ const containerRef = useRef<HTMLDivElement | null>(null);
       container.removeEventListener("wheel", handleWheel);
     };
   }, []);
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+	e.preventDefault();
+
+	if (!formRef.current) return;
+
+	const serviceId = import.meta.env.VITE_SERVICE_ID_EMAIL;
+	const templateId = import.meta.env.VITE_TEMPLATE_ID_EMAIL;
+	const publicKey = import.meta.env.VITE_PUBLIC_KEY_EMAIL;
+
+	if (!serviceId || !templateId || !publicKey) {
+		console.error('Faltan variables de entorno de EmailJS:', {
+			serviceId,
+			templateId,
+			publicKey,
+		});
+		return;
+	}
+
+	emailjs.sendForm(
+		serviceId,
+		templateId,
+		formRef.current,
+		publicKey
+	)
+	.then((response) => {
+		console.log('Email enviado con éxito:', response.status, response.text);
+		setName('');
+		setEmail('');
+		setMessage('');
+		alert('¡Mensaje enviado! Gracias por contactarme.');
+	})
+	.catch((error: unknown) => {
+		console.error('Error al enviar el email:', error);
+	});
+  }
+
 	return (
 		<div className="portfolio-page">
 			<header className="topbar">
@@ -181,36 +228,33 @@ const containerRef = useRef<HTMLDivElement | null>(null);
 
 						<div className="contact-row">
 							<span className="icon-box" aria-hidden="true">
-								&#9939;
+								🗫
 							</span>
 							<div>
 								<strong>REDES</strong>
 								<div className="socials" aria-label="Redes sociales">
-									<a href="#" aria-label="GitHub">
-										&#9703;
+									<a aria-label="GitHub" href="https://www.linkedin.com/in/josue-viturro/" target="_blank" rel="noopener noreferrer">
+										<img className='icon-socials' src={linkedin} alt="Linkedin"  />
 									</a>
-									<a href="#" aria-label="YouTube">
-										&#9704;
-									</a>
-									<a href="#" aria-label="Discord">
-										&#9705;
+									<a aria-label="GitHub" href="https://github.com/josueviturro" target="_blank" rel="noopener noreferrer">
+										<img className='icon-socials' src={github} alt="github"  />
 									</a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<form className="contact-form" onSubmit={(event) => event.preventDefault()}>
+					<form className="contact-form" ref={formRef} onSubmit={sendEmail}>
 						<h3>Envìame un mensaje</h3>
 
 						<label htmlFor="name">NOMBRE</label>
-						<input id="name" type="text" placeholder="Tu Nombre" />
+						<input id="name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu Nombre" />
 
 						<label htmlFor="email">EMAIL</label>
-						<input id="email" type="email" placeholder="tu@email.com" />
+						<input id="email" name="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="tu@email.com" />
 
 						<label htmlFor="message">MENSAJE</label>
-						<textarea id="message" rows={5} placeholder="Escribe tu mensaje..." />
+						<textarea id="message" name="message" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Escribe tu mensaje..." />
 
 						<button type="submit">Enviar Mensaje</button>
 						<div className='separator-container'>
