@@ -69,6 +69,23 @@ const containerRef = useRef<HTMLDivElement | null>(null);
 const formRef = useRef<HTMLFormElement | null>(null);
 
   useEffect(() => {
+    const sections = document.querySelectorAll<HTMLElement>('.section');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.30 }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     const container = containerRef.current;
 
     if (!container) return;
@@ -135,9 +152,6 @@ const formRef = useRef<HTMLFormElement | null>(null);
 					<a href="#contacto">Contacto</a>
 				</nav>
 
-				<a className="cv-button" href="#" aria-label="Descargar CV">
-					&darr; CV
-				</a>
 			</header>
 
 			<main>
@@ -160,13 +174,17 @@ const formRef = useRef<HTMLFormElement | null>(null);
 
 					<div className="about-copy">
 						<p>
-							Soy desarrollador fullstack atraído por la tecnología y la innovación. Disfruto
-    						creando experiencias digitales atractivas y funcionales, siempre buscando la mejor
-    						manera de optimizar procesos y mejorar la usabilidad.
+							Soy desarrollador fullstack con foco en construir soluciones reales: desde interfaces
+							web atractivas hasta aplicaciones de escritorio que automatizan procesos de negocio.
 						</p>
 						<p>
-							Actualmente, estudio Licenciatura en Sistemas en la Universidad Nacional de Lanùs, con el objetivo de crecer profesionalmente y ampliar mis conocimientos en
-							desarrollo de software.
+							Me muevo cómodo tanto en el frontend con React y TypeScript como en el backend con
+							.NET y C#. Esa versatilidad me permite entender un problema de punta a punta y tomar
+							decisiones que tienen sentido para el producto completo, no solo para mi parte.
+						</p>
+						<p>
+							Actualmente estoy cursando la Licenciatura en Sistemas en la UNLa, donde profundizo
+							los fundamentos que sostienen lo que construyo en el día a día.
 						</p>
 					</div>
 				</section>
