@@ -1,5 +1,6 @@
-import './PortfolioPage.css'
+﻿import './PortfolioPage.css'
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom'
 import icoreact from '../../assets/icons/REACT.png'
 import icohtml from '../../assets/icons/HTML.png'
 import icocss from '../../assets/icons/CSS.png'
@@ -9,26 +10,16 @@ import icots from '../../assets/icons/TYPESCRIPT.png'
 import iconet from '../../assets/icons/NET.png'
 import icocshare from "../../assets/icons/cshare.png"
 import imagen from '../../assets/images/imagen.png'
-import misionseg from '../../assets/images/proyectimages/misionsegLogo.png'
-import alphagestion from '../../assets/images/proyectimages/AlphaGestion.png'
-import biografo from '../../assets/images/proyectimages/BiografoLogo.png'
 import linkedin from '/linkedin.png'
 import github from '/github.png'
 import { useEffect, useRef, useState, type FormEvent } from "react";
+import { projects } from './projects'
 
 
 
 type Skill = {
 	name: string
 	icon: string
-}
-
-type Project = {
-	title: string
-	description: string
-	tags: string[]
-	imagen: string | null
-	link: string
 }
 
 const skills: Skill[] = [
@@ -40,30 +31,6 @@ const skills: Skill[] = [
 	{name: 'TYPESCRIPT', icon: icots },
 	{name: '.NET', icon: iconet },
 	{name: 'C#', icon: icocshare }
-]
-
-const projects: Project[] = [
-	{
-		title: 'Misi\u00f3nSeg',
-		description: 'Empresa de Seguridad privada que ofrece servicio personalizados a sus clientes',
-		tags: ['HTML5', 'CSS3', 'React', 'Vite', 'TypeScript'],
-		imagen: misionseg,
-		link:"https://misionseg.com.ar/"
-	},
-	{
-		title: 'Alpha Gestion',
-		description: 'Es un software de gestión para empresas que automatiza el control del personal y sus roles, agiliza la creación de reportes y documentos, todo desde un solo panel de control.',
-		tags: [ '.NET', 'C#'],
-		imagen: alphagestion,
-		link:"https://github.com/josueviturro/AlphaGestion"
-	},
-	{
-		title: 'Biógrafo Muebles',
-		description: 'E-commerce de muebles con catálogo organizado por categorías según el tipo de mueble, integración de pagos con Mercado Pago, calculadora de costos de envío según la distancia y panel de administración para gestionar las compras realizadas por los clientes.',
-		tags: ['HTML5', 'CSS3', 'Vite', 'TypeScript', 'React'],
-		imagen: biografo,
-		link:"https://mueblesbiografo.com.ar"
-	}
 ]
 
 export default function PortfolioPage() {
@@ -193,8 +160,9 @@ const formRef = useRef<HTMLFormElement | null>(null);
 						</p>
 						<p>
 							Me muevo cómodo tanto en el frontend con React y TypeScript como en el backend con
-							.NET y C#. Esa versatilidad me permite entender un problema de punta a punta y tomar
-							decisiones que tienen sentido para el producto completo, no solo para mi parte.
+							Node.js, además de desarrollar aplicaciones de escritorio con .NET y C#. Complemento
+							mi stack con servicios como Vercel y Supabase para desplegar y dar soporte a lo que
+							construyo, entendiendo cada proyecto de punta a punta.
 						</p>
 						<p>
 							Actualmente estoy cursando la Licenciatura en Sistemas en la UNLa, donde profundizo
@@ -225,18 +193,21 @@ const formRef = useRef<HTMLFormElement | null>(null);
 
 					<div className="project-grid">
 						{projects.map((project) => (
-							<article className="project-card" key={project.title}>
+							<article className="project-card" key={project.slug}>
 								<div className='project-imagen-content'>
-									<a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">{project.imagen && <img src={project.imagen} alt={project.title} className='project-image'/>}</a>
+									<Link className="project-link" to={`/proyecto/${project.slug}`}>{project.imagen && <img src={project.imagen} alt={project.title} className='project-image'/>}</Link>
 								</div>
 								<div className='project-text-content'>
-									<h3>{project.title}</h3>
+									<h3>
+										<Link to={`/proyecto/${project.slug}`} className="project-title-link">{project.title}</Link>
+									</h3>
 									<p>{project.description}</p>
 									<ul className="tags" aria-label={`Tecnolog\u00edas de ${project.title}`}>
 										{project.tags.map((tag) => (
 												<li key={tag}>{tag}</li>
 											))}
 										</ul>
+									<Link to={`/proyecto/${project.slug}`} className="project-detail-link">Ver detalle &rarr;</Link>
 									</div>
 
 							</article>
