@@ -9,6 +9,9 @@ import icojs from '../../assets/icons/JS.png'
 import icots from '../../assets/icons/TYPESCRIPT.png'
 import iconet from '../../assets/icons/NET.png'
 import icocshare from "../../assets/icons/cshare.png"
+import iconode from '../../assets/icons/NODE.png'
+import icovercel from '../../assets/icons/VERCEL.png'
+import icosupabase from '../../assets/icons/SUPABASE.png'
 import imagen from '../../assets/images/imagen.png'
 import linkedin from '/linkedin.png'
 import github from '/github.png'
@@ -30,7 +33,10 @@ const skills: Skill[] = [
 	{ name: 'VITE', icon: icovite },
 	{name: 'TYPESCRIPT', icon: icots },
 	{name: '.NET', icon: iconet },
-	{name: 'C#', icon: icocshare }
+	{name: 'C#', icon: icocshare },
+	{name: 'NODE.JS', icon: iconode },
+	{name: 'VERCEL', icon: icovercel },
+	{name: 'SUPABASE', icon: icosupabase }
 ]
 
 export default function PortfolioPage() {
