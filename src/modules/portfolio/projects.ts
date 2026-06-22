@@ -16,7 +16,7 @@ export const projects: Project[] = [
 	{
 		slug: 'misionseg',
 		title: 'MisiónSeg',
-		description: 'Empresa de Seguridad privada que ofrece servicio personalizados a sus clientes',
+		description: 'Sitio web para MisiónSeg, empresa de seguridad privada, donde diseñé secciones claras para cada plan y modalidad de trabajo en seguridad, detallando alcance y condiciones de cada servicio para que el cliente no se quede con dudas. Incluye un formulario de contacto pensado para facilitar la consulta y acompañar la venta.',
 		longDescription: 'Desarrollé el sitio web completo para MisiónSeg, una empresa de seguridad privada, desde el diseño hasta la implementación. El sitio incluye una presentación de los servicios ofrecidos, diseño totalmente responsivo y optimización para buscadores. Actualmente está en producción y es el canal principal que usa la empresa para comunicarse con sus clientes.',
 		tags: ['HTML5', 'CSS3', 'React', 'Vite', 'TypeScript'],
 		imagen: misionseg,
