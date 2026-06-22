@@ -176,6 +176,12 @@ const formRef = useRef<HTMLFormElement | null>(null);
 					</h1>
 
 					<p className="role">DESARROLLADOR FULLSTACK</p>
+
+					<span className="availability-badge">
+						<span className="availability-dot" aria-hidden="true"></span>
+						Abierto a propuestas laborales
+					</span>
+
 					<p className="quote">"Codigo limpio, interfaces elegantes, experiencias fluidas."</p>
 
 					<h2 className="section-title">Sobre m&iacute;</h2>

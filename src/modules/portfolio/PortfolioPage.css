@@ -152,6 +152,35 @@ main {
 		font-style: italic;
 }
 
+.availability-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 0.9rem;
+		padding: 0.4rem 0.95rem;
+		border-radius: 999px;
+		border: 1px solid rgba(46, 230, 118, 0.35);
+		background: rgba(46, 230, 118, 0.08);
+		color: #2ee676;
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.03em;
+}
+
+.availability-dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: #2ee676;
+		box-shadow: 0 0 8px rgba(46, 230, 118, 0.8);
+		animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.35; }
+}
+
 .section-title {
 		margin: 0;
 		font-size: 2rem;
