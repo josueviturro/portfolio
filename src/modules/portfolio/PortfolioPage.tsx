@@ -10,7 +10,8 @@ import iconet from '../../assets/icons/NET.png'
 import icocshare from "../../assets/icons/cshare.png"
 import imagen from '../../assets/images/imagen.png'
 import misionseg from '../../assets/images/proyectimages/misionsegLogo.png'
-import alphagestion from '../../assets/images/proyectimages/alphagestion.png'
+import alphagestion from '../../assets/images/proyectimages/AlphaGestion.png'
+import biografo from '../../assets/images/proyectimages/BiografoLogo.png'
 import linkedin from '/linkedin.png'
 import github from '/github.png'
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -55,6 +56,13 @@ const projects: Project[] = [
 		tags: [ '.NET', 'C#'],
 		imagen: alphagestion,
 		link:"https://github.com/josueviturro/AlphaGestion"
+	},
+	{
+		title: 'Biógrafo Muebles',
+		description: 'E-commerce de muebles con catálogo organizado por categorías según el tipo de mueble, integración de pagos con Mercado Pago, calculadora de costos de envío según la distancia y panel de administración para gestionar las compras realizadas por los clientes.',
+		tags: ['HTML5', 'CSS3', 'Vite', 'TypeScript', 'React'],
+		imagen: biografo,
+		link:"https://mueblesbiofrafo.com.ar"
 	}
 ]
 
