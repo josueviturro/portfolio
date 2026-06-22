@@ -36,7 +36,7 @@ export const projects: Project[] = [
 		title: 'Biógrafo Muebles',
 		description: 'E-commerce de muebles con catálogo organizado por categorías según el tipo de mueble, integración de pagos con Mercado Pago, calculadora de costos de envío según la distancia y panel de administración para gestionar las compras realizadas por los clientes.',
 		longDescription: 'Desarrollé un e-commerce completo para una mueblería, con catálogo organizado por categorías según el tipo de mueble, integración de Mercado Pago para pagos online, un calculador de costo de envío según la distancia del cliente, y un panel de administración donde el negocio puede ver y gestionar las compras realizadas.',
-		tags: ['HTML5', 'CSS3', 'Vite', 'TypeScript', 'React'],
+		tags: ['HTML5', 'CSS3', 'Vite', 'TypeScript', 'React', 'Vercel', 'Supabase'],
 		imagen: biografo,
 		link: 'https://mueblesbiografo.com.ar'
 	}
