@@ -62,7 +62,7 @@ const projects: Project[] = [
 		description: 'E-commerce de muebles con catálogo organizado por categorías según el tipo de mueble, integración de pagos con Mercado Pago, calculadora de costos de envío según la distancia y panel de administración para gestionar las compras realizadas por los clientes.',
 		tags: ['HTML5', 'CSS3', 'Vite', 'TypeScript', 'React'],
 		imagen: biografo,
-		link:"https://mueblesbiofrafo.com.ar"
+		link:"https://mueblesbiografo.com.ar"
 	}
 ]
 
