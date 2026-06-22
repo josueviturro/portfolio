@@ -171,6 +171,12 @@ const formRef = useRef<HTMLFormElement | null>(null);
 							construyo, entendiendo cada proyecto de punta a punta.
 						</p>
 						<p>
+							También configuro bases de datos tanto relacionales como no relacionales según lo
+							que necesite cada proyecto, e incorporo herramientas de inteligencia artificial como
+							Claude Code y Gemini en mi flujo de trabajo para ser más eficiente, siempre
+							entendiendo cada decisión técnica que se toma.
+						</p>
+						<p>
 							Actualmente estoy cursando la Licenciatura en Sistemas en la UNLa, donde profundizo
 							los fundamentos que sostienen lo que construyo en el día a día.
 						</p>
