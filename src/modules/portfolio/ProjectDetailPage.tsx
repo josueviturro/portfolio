@@ -1,6 +1,7 @@
 import './ProjectDetailPage.css'
 import { Link, useParams } from 'react-router-dom'
 import { projects } from './projects'
+import { techIcons } from './techIcons'
 
 export default function ProjectDetailPage() {
 	const { slug } = useParams<{ slug: string }>()
@@ -28,13 +29,20 @@ export default function ProjectDetailPage() {
 					{project.imagen && <img src={project.imagen} alt={project.title} />}
 				</div>
 
-				<h1>{project.title}</h1>
+				<div className="project-tech-icons" aria-label={`Tecnologías de ${project.title}`}>
+					{project.tags.map((tag) => {
+						const icon = techIcons[tag]
+						if (!icon) return null
+						return (
+							<div className="project-tech-icon" key={tag} title={tag}>
+								<img src={icon} alt="" />
+								<span>{tag}</span>
+							</div>
+						)
+					})}
+				</div>
 
-				<ul className="tags" aria-label={`Tecnologías de ${project.title}`}>
-					{project.tags.map((tag) => (
-						<li key={tag}>{tag}</li>
-					))}
-				</ul>
+				<h1>{project.title}</h1>
 
 				<p className="project-detail-description">{project.longDescription}</p>
 

@@ -1,14 +1,4 @@
 .portfolio-page {
-		--bg: #05080f;
-		--panel: #090d17;
-		--panel-2: #0c111d;
-		--text: #f3f6fb;
-		--muted: #a8b2c7;
-		--cyan: #14d7ff;
-		--cyan-soft: rgba(20, 215, 255, 0.35);
-		--orange: #ff9d00;
-		--line: rgba(255, 255, 255, 0.08);
-
 		min-height: 100vh;
 		color: var(--text);
 		background-color: var(--bg);
@@ -302,14 +292,13 @@ main {
 }
 
 .project-card {
-		display: grid;
-		grid-template-rows: 1fr 1fr;
+		display: flex;
+		flex-direction: column;
 		border-radius: 22px;
 		overflow: hidden;
 		border: 1px solid rgba(255, 255, 255, 0.07);
 		background: var(--panel);
 		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
-		height: 550px;
 		width: 550px;
 }
 
@@ -320,7 +309,6 @@ main {
 		justify-content: center;
 		align-items: center;
 		background-color: #cfcfcf;
-		grid-row: 1 / 2;
 		height: 270px;
 		overflow: hidden;
 }
@@ -336,17 +324,17 @@ main {
 .project-text-content{
 		padding: 10px;
 		display: flex;
-		height: 100%;
 		flex-direction: column;
-		justify-content: space-between;
 		align-items: start;
-		grid-row: 2/3;
+		gap: 0.6rem;
 }
 
 .project-image{
-		width: 50%;
-		object-fit: cover;
-
+		max-width: 90%;
+		max-height: 90%;
+		width: auto;
+		height: auto;
+		object-fit: contain;
 }
 
 .project-text-content h3 {
@@ -589,12 +577,7 @@ footer span {
 		}
 
 			.project-card{
-			width: 100%;	
-		}
-
-		.project-image {
-				width: auto;
-				height: 100%;
+			width: 100%;
 		}
 }
 
@@ -621,11 +604,6 @@ footer span {
 				display: none;
 		}
 		.project-card{
-			width: 100%;	
-		}
-
-		.project-image {
-				width: auto;
-				height: 100%;
+			width: 100%;
 		}
 }

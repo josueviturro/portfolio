@@ -6,6 +6,16 @@
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	--bg: #05080f;
+	--panel: #090d17;
+	--panel-2: #0c111d;
+	--text: #f3f6fb;
+	--muted: #a8b2c7;
+	--cyan: #14d7ff;
+	--cyan-soft: rgba(20, 215, 255, 0.35);
+	--orange: #ff9d00;
+	--line: rgba(255, 255, 255, 0.08);
 }
 
 * {

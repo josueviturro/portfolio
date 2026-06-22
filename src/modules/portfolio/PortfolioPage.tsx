@@ -220,8 +220,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 											))}
 										</ul>
 									<Link to={`/proyecto/${project.slug}`} className="project-detail-link">Ver detalle &rarr;</Link>
-									</div>
-
+								</div>
 							</article>
 						))}
 					</div>
