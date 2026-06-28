@@ -84,6 +84,18 @@
 		color: var(--muted);
 }
 
+.project-detail-divider {
+		border: none;
+		border-top: 1px solid rgba(255, 255, 255, 0.22);
+		margin: 0 0 1.2rem;
+}
+
+.title-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .project-detail-description {
 		color: #d3dbeb;
 		line-height: 1.75;
@@ -91,12 +103,124 @@
 		margin: 0 0 2rem;
 }
 
+.project-gallery {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 2rem;
+		padding: 0;
+		gap: 2.2rem;
+}
+
+.project-gallery-entry {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+}
+
+.project-gallery-entry h2 {
+		margin: 0 0 0.4rem;
+		font-size: 1.3rem;
+}
+
+.project-gallery-entry p {
+		margin: 0 0 1rem;
+		color: var(--muted);
+}
+
+.project-gallery-thumb-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+}
+
+.project-gallery-thumb {
+		border: none;
+		padding: 0;
+		margin: 0;
+		background: none;
+		line-height: 0;
+		cursor: pointer;
+}
+
+.project-gallery-thumb img {
+		width: 400px;
+		max-width: 100%;
+		border-radius: 10px;
+		display: block;
+		transition: transform 0.3s ease;
+}
+
+.project-gallery-thumb:hover img {
+		transform: scale(1.04);
+}
+
+.project-gallery-overlay {
+		position: fixed;
+		inset: 0;
+		background: rgba(2, 5, 12, 0.92);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: clamp(0.5rem, 2vw, 1.5rem);
+		z-index: 100;
+}
+
+.project-gallery-overlay figure {
+		margin: 0;
+		max-width: min(1500px, 97vw);
+		max-height: 95vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.8rem;
+}
+
+.project-gallery-overlay img {
+		max-width: 100%;
+		max-height: 88vh;
+		object-fit: contain;
+		border-radius: 10px;
+}
+
+.project-gallery-overlay figcaption {
+		text-align: center;
+}
+
+.project-gallery-overlay figcaption strong {
+		display: block;
+		margin-bottom: 0.2rem;
+}
+
+.project-gallery-overlay figcaption span {
+		color: var(--muted);
+		font-size: 0.88rem;
+}
+
+.project-gallery-close {
+		position: fixed;
+		top: 1.2rem;
+		right: 1.5rem;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.08);
+		color: var(--text);
+		font-size: 1.4rem;
+		line-height: 1;
+		cursor: pointer;
+		z-index: 101;
+}
+
 .project-visit-link {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.4rem;
 		border-radius: 999px;
-		padding: 0.7rem 1.4rem;
+		padding: 0.5rem 1.2rem;
+		height: 40px;
 		font-weight: 700;
 		text-decoration: none;
 		color: #04111e;

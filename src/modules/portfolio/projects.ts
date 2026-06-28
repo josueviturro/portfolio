@@ -1,6 +1,6 @@
-import misionseg from '../../assets/images/proyectimages/misionsegLogo.png'
-import alphagestion from '../../assets/images/proyectimages/AlphaGestion.png'
-import biografo from '../../assets/images/proyectimages/BiografoLogo.png'
+import misionseg from '../../assets/images/proyectimages/misionseg/misionsegLogo.png'
+import alphagestion from '../../assets/images/proyectimages/alpha-gestion/AlphaGestion.png'
+import biografo from '../../assets/images/proyectimages/biografo-muebles/BiografoLogo.png'
 
 export type Project = {
 	slug: string
