@@ -47,6 +47,27 @@
 		color: var(--cyan);
 }
 
+.cv-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		white-space: nowrap;
+		border-radius: 999px;
+		padding: 0.55rem 1.2rem;
+		font-size: 0.84rem;
+		font-weight: 700;
+		text-decoration: none;
+		color: #1a0f00;
+		background: linear-gradient(90deg, #ffb733, var(--orange));
+		box-shadow: 0 0 18px rgba(255, 157, 0, 0.5);
+		transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cv-button:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 0 22px rgba(255, 157, 0, 0.7);
+}
+
 
 main {
 		width: min(1120px, 92vw);

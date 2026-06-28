@@ -133,6 +133,9 @@ const formRef = useRef<HTMLFormElement | null>(null);
 					<a href="#contacto">Contacto</a>
 				</nav>
 
+				<a className="cv-button" href="/Josue-Viturro-CV.pdf" download aria-label="Descargar CV">
+					Descargar CV
+				</a>
 			</header>
 
 			<main>
