@@ -148,7 +148,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 					</div>
 
 					<h1>
-						Josuè <span>Viturro</span>
+						Josué <span>Viturro</span>
 					</h1>
 
 					<p className="role">DESARROLLADOR FULLSTACK</p>
@@ -231,7 +231,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 
 				<section id="contacto" className="section contact">
 					<div className="contact-info">
-						<h2>Informaciòn de Contacto</h2>
+						<h2>Información de Contacto</h2>
 
 						<div className="contact-row">
 							<span className="icon-box" aria-hidden="true">
@@ -250,7 +250,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 							<div>
 								<strong>REDES</strong>
 								<div className="socials" aria-label="Redes sociales">
-									<a aria-label="GitHub" href="https://www.linkedin.com/in/josue-viturro/" target="_blank" rel="noopener noreferrer">
+									<a aria-label="LinkedIn" href="https://www.linkedin.com/in/josue-viturro/" target="_blank" rel="noopener noreferrer">
 										<img className='icon-socials' src={linkedin} alt="Linkedin"  />
 									</a>
 									<a aria-label="GitHub" href="https://github.com/josueviturro" target="_blank" rel="noopener noreferrer">
@@ -262,7 +262,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 					</div>
 
 					<form className="contact-form" ref={formRef} onSubmit={sendEmail}>
-						<h3>Envìame un mensaje</h3>
+						<h3>Envíame un mensaje</h3>
 
 						<label htmlFor="name">NOMBRE</label>
 						<input id="name" name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu Nombre" />
@@ -286,7 +286,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 			</main>
 
 			<footer>
-				&copy; 2026 Josuè Viturro. Hecho con <span>&hearts;</span> y Còdigo Limpio.
+				&copy; 2026 Josué Viturro. Hecho con <span>&hearts;</span> y Código Limpio.
 			</footer>
 		</div>
 	)
