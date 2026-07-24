@@ -139,7 +139,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 			</header>
 
 			<main>
-				<section id="inicio" className="hero section">
+				<section id="inicio" className="hero section visible">
 					<div className="avatar-wrap" aria-hidden="true">
 						<div className="avatar">
 								<img src={imagen} alt="Avatar" className='mi-avatar' />
@@ -158,7 +158,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 						Abierto a propuestas laborales
 					</span>
 
-					<p className="quote">"Codigo limpio, interfaces elegantes, experiencias fluidas."</p>
+					<p className="quote">"C&oacute;digo limpio, interfaces elegantes, experiencias fluidas."</p>
 
 					<h2 className="section-title">Sobre m&iacute;</h2>
 
