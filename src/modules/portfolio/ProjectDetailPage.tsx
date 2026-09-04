@@ -6,9 +6,11 @@ import { techIcons } from './techIcons'
 import { galleryDescriptions, type GalleryImage } from './galleryDescriptions'
 
 const galleryImages = import.meta.glob<string>(
-	'../../assets/images/proyectimages/*/*.{png,jpg,jpeg,webp}',
+	'../../assets/images/proyectimages/*/*.{png,jpg,jpeg,webp,mp4}',
 	{ eager: true, import: 'default' }
 )
+
+const isVideo = (file: string) => file.toLowerCase().endsWith('.mp4')
 
 export default function ProjectDetailPage() {
 	const { slug } = useParams<{ slug: string }>()
@@ -77,13 +79,25 @@ export default function ProjectDetailPage() {
 									<h2>{shot.title}</h2>
 									<p>{shot.description}</p>
 									<div className="project-gallery-thumb-container">
-										<button
-											type="button"
-											className="project-gallery-thumb"
-											onClick={() => setActiveShot({ ...shot, src })}
-										>
-											<img src={src} alt={shot.title} />
-										</button>
+										{isVideo(shot.file) ? (
+											<video
+												className="project-gallery-thumb project-gallery-video"
+												src={src}
+												autoPlay
+												loop
+												muted
+												playsInline
+												onClick={() => setActiveShot({ ...shot, src })}
+											/>
+										) : (
+											<button
+												type="button"
+												className="project-gallery-thumb"
+												onClick={() => setActiveShot({ ...shot, src })}
+											>
+												<img src={src} alt={shot.title} />
+											</button>
+										)}
 									</div>
 								</div>
 							)
@@ -103,7 +117,11 @@ export default function ProjectDetailPage() {
 						&times;
 					</button>
 					<figure onClick={(e) => e.stopPropagation()}>
-						<img src={activeShot.src} alt={activeShot.title} />
+						{isVideo(activeShot.file) ? (
+							<video src={activeShot.src} controls autoPlay loop muted playsInline />
+						) : (
+							<img src={activeShot.src} alt={activeShot.title} />
+						)}
 						<figcaption>
 							<strong>{activeShot.title}</strong>
 							<span>{activeShot.description}</span>

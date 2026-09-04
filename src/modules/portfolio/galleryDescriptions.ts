@@ -59,6 +59,48 @@ export const galleryDescriptions: Record<string, GalleryImage[]> = {
 			description: 'El archivo final replica las mismas columnas que la aplicación (Legajo, Apellido, Nombres, DNI, Cargo, Estado, Grupo, Función, Observaciones, Horario), manteniendo el dato consistente entre lo que se carga en el sistema y el reporte que termina usando la empresa.'
 		}
 	],
+	'godzilla-gym': [
+		{
+			file: 'Formulario.png',
+			title: 'Alta y edición de socios',
+			description: 'Formulario de perfil del socio (DNI, tag del llavero, datos de contacto y de emergencia) junto al estado de cuenta, con selección de plan, método de pago (efectivo o QR) y actualización de vencimiento. A la derecha, el panel de Control de Acceso permite probar la apertura del molinete, simular un acceso denegado y abrir la pantalla de acceso en standby, con el estado de la conexión Arduino siempre visible abajo.'
+		},
+		{
+			file: 'Socios.png',
+			title: 'Listado de socios',
+			description: 'Vista general de socios con totales de socios activos, cuotas al día y vencidos, filtros rápidos por estado y exportación a CSV para llevar el registro fuera del sistema si hace falta.'
+		},
+		{
+			file: 'HistorialPagos.png',
+			title: 'Historial de pagos',
+			description: 'Búsqueda de un socio puntual para revisar todos sus pagos registrados: fecha, plan abonado, monto y si fue por transferencia, con el nuevo vencimiento calculado automáticamente en cada pago.'
+		},
+		{
+			file: 'Ganancias.png',
+			title: 'Reporte de ganancias',
+			description: 'Totales de ingresos del día, del mes y del año (cifra difuminada), con el detalle de cada cobro —cuotas y venta de productos— y la posibilidad de filtrar por un día puntual o ver el año completo.'
+		},
+		{
+			file: 'Productos.png',
+			title: 'Catálogo de productos',
+			description: 'Gestión del kiosco del gimnasio: alta de productos con nombre y precio, y listado con acciones para vender, editar o eliminar cada uno directamente desde la tabla.'
+		},
+		{
+			file: 'idle-loop.mp4',
+			title: 'Pantalla de acceso en standby',
+			description: 'Pantalla que queda mostrándose en la entrada del gimnasio cuando no hay ningún socio pasando su tag, lista para reaccionar al próximo acceso.'
+		},
+		{
+			file: 'acceso-concedido.mp4',
+			title: 'Acceso concedido',
+			description: 'Un socio con la cuota al día pasa su tag por el lector conectado al Arduino: el sistema valida su estado en la base de datos y habilita el paso en tiempo real.'
+		},
+		{
+			file: 'acceso-denegado.mp4',
+			title: 'Acceso denegado',
+			description: 'Cuando el tag no corresponde a un socio activo o la cuota está vencida, la pantalla de acceso lo rechaza y avisa en el momento, sin intervención manual.'
+		}
+	],
 	'biografo-muebles': [
 		{
 			file: 'Home.png',

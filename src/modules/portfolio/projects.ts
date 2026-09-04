@@ -1,6 +1,7 @@
 import misionseg from '../../assets/images/proyectimages/misionseg/misionsegLogo.png'
 import alphagestion from '../../assets/images/proyectimages/alpha-gestion/AlphaGestion.png'
 import biografo from '../../assets/images/proyectimages/biografo-muebles/BiografoLogo.png'
+import godzillagym from '../../assets/images/proyectimages/godzilla-gym/GodzillaGymLogo.png'
 
 export type Project = {
 	slug: string
@@ -39,5 +40,14 @@ export const projects: Project[] = [
 		tags: ['HTML5', 'CSS3', 'Vite', 'TypeScript', 'React', 'Vercel', 'Supabase'],
 		imagen: biografo,
 		link: 'https://mueblesbiografo.com.ar'
+	},
+	{
+		slug: 'godzilla-gym',
+		title: 'Godzilla Gym',
+		description: 'Sistema de gestión para un gimnasio: control de acceso por hardware, cobro de cuotas y venta de productos, y administración de socios, todo desde una sola aplicación de escritorio.',
+		longDescription: 'Desarrollé una aplicación de escritorio para automatizar la gestión diaria de un gimnasio: alta y edición de socios, control de vencimientos y cuotas, venta de productos, y un reporte de ganancias diario/mensual/anual. Integré un lector de tags con Arduino para el control de acceso físico a las instalaciones y Mercado Pago para los cobros, con Supabase como base de datos en la nube. Soy el único desarrollador del proyecto, con mantenimiento y actualizaciones activas cada 1-2 semanas desde que entró en producción.',
+		tags: ['C#', '.NET', 'Supabase'],
+		imagen: godzillagym,
+		link: 'https://github.com/josueviturro/AppGym'
 	}
 ]
