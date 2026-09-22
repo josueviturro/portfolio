@@ -66,23 +66,6 @@ const formRef = useRef<HTMLFormElement | null>(null);
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const container = containerRef.current;
-
-    if (!container) return;
-
-    const handleWheel = (e: WheelEvent) => {
-      e.preventDefault();
-      container.scrollLeft += e.deltaY;
-    };
-
-    container.addEventListener("wheel", handleWheel, { passive: false });
-
-    return () => {
-      container.removeEventListener("wheel", handleWheel);
-    };
-  }, []);
-
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 	e.preventDefault();
 
@@ -157,6 +140,8 @@ const formRef = useRef<HTMLFormElement | null>(null);
 						<span className="availability-dot" aria-hidden="true"></span>
 						Abierto a propuestas laborales
 					</span>
+
+					<p className="location-line">📍 Buenos Aires, Argentina · Presencial · H&iacute;brido · Remoto</p>
 
 					<p className="quote">"C&oacute;digo limpio, interfaces elegantes, experiencias fluidas."</p>
 

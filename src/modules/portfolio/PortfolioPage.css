@@ -163,6 +163,13 @@ main {
 		font-style: italic;
 }
 
+.location-line {
+		margin: 0.7rem 0 0;
+		color: var(--muted);
+		font-size: 0.85rem;
+		letter-spacing: 0.02em;
+}
+
 .availability-badge {
 		display: inline-flex;
 		align-items: center;
@@ -243,7 +250,6 @@ main {
 }
 
 .skills-panel {
-		display: flex;
 		border: 1px solid rgba(20, 215, 255, 0.22);
 		border-radius: 20px;
 		background: linear-gradient(180deg, rgba(9, 13, 23, 0.95), rgba(6, 10, 18, 0.98));
@@ -252,15 +258,10 @@ main {
 				0 12px 42px rgba(0, 0, 0, 0.35);
 		padding: clamp(1.2rem, 4vw, 2.1rem);
 		display: flex;
-		align-items: center;
-		justify-content: start;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: center;
 		gap: 0.9rem;
-		overflow: scroll;	
-		scroll-snap-type: x mandatory
-}
-
-.skills-panel::-webkit-scrollbar {
-		display: none;
 }
 
 .skill-card {
