@@ -12,7 +12,7 @@ import icocshare from "../../assets/icons/cshare.png"
 import iconode from '../../assets/icons/NODE.png'
 import icovercel from '../../assets/icons/VERCEL.png'
 import icosupabase from '../../assets/icons/SUPABASE.png'
-import imagen from '../../assets/images/imagen.png'
+import imagen from '../../assets/images/perfil.jpg'
 import linkedin from '/linkedin.png'
 import github from '/github.png'
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -125,7 +125,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 				<section id="inicio" className="hero section visible">
 					<div className="avatar-wrap" aria-hidden="true">
 						<div className="avatar">
-								<img src={imagen} alt="Avatar" className='mi-avatar' />
+								<img src={imagen} alt="Josué Viturro" className='mi-avatar' />
 						</div>
 						<span className="avatar-chip"></span>
 					</div>

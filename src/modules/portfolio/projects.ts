@@ -1,7 +1,7 @@
 import misionseg from '../../assets/images/proyectimages/misionseg/misionsegLogo.png'
 import alphagestion from '../../assets/images/proyectimages/alpha-gestion/AlphaGestion.png'
 import biografo from '../../assets/images/proyectimages/biografo-muebles/BiografoLogo.png'
-import godzillagym from '../../assets/images/proyectimages/godzilla-gym/GodzillaGymLogo.png'
+import lyonfit from '../../assets/images/proyectimages/lyon-fit/LyonFitLogo.png'
 
 export type Project = {
 	slug: string
@@ -24,12 +24,12 @@ export const projects: Project[] = [
 		link: 'https://mueblesbiografo.com.ar'
 	},
 	{
-		slug: 'godzilla-gym',
-		title: 'Godzilla Gym',
-		description: 'Sistema de gestión para un gimnasio: control de acceso por hardware, cobro de cuotas y venta de productos, y administración de socios, todo desde una sola aplicación de escritorio.',
-		longDescription: 'Desarrollé una aplicación de escritorio para automatizar la gestión diaria de un gimnasio: alta y edición de socios, control de vencimientos y cuotas, venta de productos, y un reporte de ganancias diario/mensual/anual. Integré un lector de tags con Arduino para el control de acceso físico a las instalaciones y Mercado Pago para los cobros, con Supabase como base de datos en la nube. Soy el único desarrollador del proyecto, con mantenimiento y actualizaciones activas cada 1-2 semanas desde que entró en producción.',
-		tags: ['C#', '.NET', 'Supabase'],
-		imagen: godzillagym,
+		slug: 'lyon-fit',
+		title: 'Lyon Fit',
+		description: 'Sistema de gestión de escritorio para gimnasios: control de acceso por hardware con ESP32, cobro de cuotas, caja diaria, venta de productos y administración de socios, todo desde una sola aplicación.',
+		longDescription: 'Desarrollé una aplicación de escritorio en C# con WinUI 3 para automatizar la gestión diaria de un gimnasio: alta, edición y búsqueda de socios por nombre o DNI, cobro de cuotas con cálculo automático del vencimiento, caja con totales del día, del mes y del año separando efectivo y transferencia, y catálogo de planes y productos. Para el control de acceso físico diseñé un sistema con un ESP32 y un teclado matricial: el socio ingresa su DNI, el ESP32 consulta a la app por USB o Wi-Fi y, si la cuota está al día, abre la cerradura mediante un relé; cada ingreso queda registrado y se muestra en una pantalla de acceso en un segundo monitor. Los datos se guardan en una base SQLite local con copias de seguridad y registro de eventos, y el modelo ya está preparado para sincronizarse con la nube. Soy el único desarrollador del proyecto, que está en producción con mantenimiento y actualizaciones activas.',
+		tags: ['C#', '.NET', 'SQLite', 'ESP32'],
+		imagen: lyonfit,
 		link: 'https://github.com/josueviturro/AppGym'
 	},
 	{
