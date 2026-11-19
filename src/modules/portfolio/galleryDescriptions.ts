@@ -59,6 +59,28 @@ export const galleryDescriptions: Record<string, GalleryImage[]> = {
 			description: 'El archivo final replica las mismas columnas que la aplicación (Legajo, Apellido, Nombres, DNI, Cargo, Estado, Grupo, Función, Observaciones, Horario), manteniendo el dato consistente entre lo que se carga en el sistema y el reporte que termina usando la empresa.'
 		}
 	],
+	'lyon-fit': [
+		{
+			file: 'socios.png',
+			title: 'Socios',
+			description: 'Pantalla principal de la aplicación. A la izquierda, el listado de socios con búsqueda instantánea por nombre o DNI, filtros rápidos (Todos, Al día, Vencidos) con su contador, un punto de color que indica el estado de cada cuota y el botón para exportar todo a CSV. Al elegir un socio se abre su ficha: el estado de la cuota, el DNI con el que ingresa por el teclado de la puerta, sus datos personales y de emergencia, la membresía (plan, vencimiento con los días que faltan y fecha de alta), el historial de pagos con el medio y el nuevo vencimiento de cada uno, y los últimos accesos con el resultado de cada intento. Desde la misma ficha se cobra la cuota, se editan los datos o se da de baja al socio. Arriba a la derecha se ve siempre el estado de conexión del teclado y el acceso a la pantalla de acceso.'
+		},
+		{
+			file: 'caja.png',
+			title: 'Caja',
+			description: 'Resumen de ingresos por cuotas y venta de productos en tres tarjetas: hoy, este mes y este año. Cada una muestra el total, la cantidad de cobros y cuánto entró en efectivo y cuánto por transferencia. Debajo, el detalle de cada movimiento con fecha y hora, socio o concepto, plan o producto, medio de pago y monto, con la opción de ver un día puntual desde el calendario o volver a la vista del año completo.'
+		},
+		{
+			file: 'planes-productos.png',
+			title: 'Planes y productos',
+			description: 'Catálogo del gimnasio dividido en dos pestañas. En Planes se cargan las cuotas con nombre y precio; son las que después se eligen al dar de alta un socio o al cobrarle. En Productos se arma el kiosco del gimnasio, y desde ahí se registra una venta indicando la cantidad, que entra directamente en la caja. Cada plan o producto se puede crear, editar o eliminar desde el mismo panel.'
+		},
+		{
+			file: 'sistema.png',
+			title: 'Sistema y teclado de acceso',
+			description: 'Configuración general de la aplicación. Permite cambiar el nombre del gimnasio y conectar el teclado de la puerta, armado con un ESP32: por cable USB, eligiendo el puerto, o por Wi-Fi, cargando la red, la dirección de la PC, el puerto y una clave. La placa se programa desde la propia app con un botón, sin necesidad de abrir el Arduino IDE. Cuando un socio tipea su DNI, el ESP32 le consulta a la app si la cuota está al día y, si es así, activa un relé que abre la cerradura. También incluye una prueba de ingreso sin hardware, la copia de seguridad de la base de datos y, a la derecha, el registro de eventos en vivo, con filtro para ver solo errores y avisos, para diagnosticar problemas en el gimnasio.'
+		}
+	],
 	'biografo-muebles': [
 		{
 			file: 'Home.png',

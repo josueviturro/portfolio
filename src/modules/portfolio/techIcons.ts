@@ -9,6 +9,8 @@ import icocshare from '../../assets/icons/cshare.png'
 import iconode from '../../assets/icons/NODE.png'
 import icovercel from '../../assets/icons/VERCEL.png'
 import icosupabase from '../../assets/icons/SUPABASE.png'
+import icosqlite from '../../assets/icons/SQLITE.png'
+import icoesp32 from '../../assets/icons/ESP32.png'
 
 export const techIcons: Record<string, string> = {
 	'HTML5': icohtml,
@@ -22,4 +24,6 @@ export const techIcons: Record<string, string> = {
 	'Node.js': iconode,
 	'Vercel': icovercel,
 	'Supabase': icosupabase,
+	'SQLite': icosqlite,
+	'ESP32': icoesp32,
 }
