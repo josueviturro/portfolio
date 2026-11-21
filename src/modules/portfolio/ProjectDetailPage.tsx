@@ -2,6 +2,7 @@ import './ProjectDetailPage.css'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { projects } from './projects'
+import { silabear } from './hyphenate'
 import { techIcons } from './techIcons'
 import { galleryDescriptions, type GalleryImage } from './galleryDescriptions'
 
@@ -65,7 +66,7 @@ export default function ProjectDetailPage() {
 				{/* Titulo del proyecto y descripción */}
 				<div className='title-container'><h1>{project.title}</h1><a className="project-visit-link" href={project.link} target="_blank" rel="noopener noreferrer">
 					Visitar sitio &#8599;</a></div>
-				<p className="project-detail-description">{project.longDescription}</p>
+				<p className="project-detail-description">{silabear(project.longDescription)}</p>
 				<hr className="project-detail-divider" />
 				{/* Titulo del proyecto y descripción */}
 
@@ -77,7 +78,7 @@ export default function ProjectDetailPage() {
 							return (
 								<div className="project-gallery-entry" key={shot.file}>
 									<h2>{shot.title}</h2>
-									<p>{shot.description}</p>
+									<p>{silabear(shot.description)}</p>
 									<div className="project-gallery-thumb-container">
 										{isVideo(shot.file) ? (
 											<video

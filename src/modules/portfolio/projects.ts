@@ -1,7 +1,7 @@
-import misionseg from '../../assets/images/proyectimages/misionseg/misionsegLogo.png'
-import alphagestion from '../../assets/images/proyectimages/alpha-gestion/AlphaGestion.png'
-import biografo from '../../assets/images/proyectimages/biografo-muebles/BiografoLogo.png'
-import lyonfit from '../../assets/images/proyectimages/lyon-fit/LyonFitLogo.png'
+import misionseg from '../../assets/images/proyectimages/misionseg/misionsegLogo.webp'
+import alphagestion from '../../assets/images/proyectimages/alpha-gestion/AlphaGestion.webp'
+import biografo from '../../assets/images/proyectimages/biografo-muebles/BiografoLogo.webp'
+import lyonfit from '../../assets/images/proyectimages/lyon-fit/LyonFitLogo.webp'
 
 export type Project = {
 	slug: string

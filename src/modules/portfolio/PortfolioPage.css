@@ -632,3 +632,371 @@ footer span {
 			width: 100%;
 		}
 }
+
+/* ---------- Contrataciones ---------- */
+.services-intro {
+		max-width: 720px;
+		margin: -0.8rem auto 2.2rem;
+		text-align: center;
+		color: var(--muted);
+		line-height: 1.7;
+}
+
+.services-grid {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1rem;
+		align-items: stretch;
+}
+
+/* Las 8 partes de cada tarjeta (título, descripción, precio, nota, lista, ideal para,
+   links, botón) comparten filas con las tarjetas vecinas: todo queda alineado. */
+.service-card {
+		position: relative;
+		display: grid;
+		grid-row: span 8;
+		grid-template-rows: subgrid;
+		row-gap: 0.75rem;
+		align-content: start;
+		padding: 1.5rem 1.2rem 1.3rem;
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		background: linear-gradient(180deg, var(--panel), var(--panel-2));
+		box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+		transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+		transform: translateY(-3px);
+		border-color: rgba(255, 157, 0, 0.55);
+		box-shadow: 0 0 0 1px rgba(255, 157, 0, 0.25) inset, 0 15px 34px rgba(255, 157, 0, 0.12);
+}
+
+.service-price-note {
+		margin: -0.4rem 0 0;
+		align-self: start;
+		font-size: 0.75rem;
+		line-height: 1.45;
+		color: #ffbe55;
+}
+
+.service-card h3 {
+		margin: 0;
+		font-size: 1.25rem;
+}
+
+.service-tagline {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.9rem;
+		line-height: 1.55;
+}
+
+.service-price {
+		margin: 0.2rem 0;
+		font-size: 1.9rem;
+		font-weight: 800;
+		color: var(--cyan);
+		letter-spacing: -0.02em;
+		white-space: nowrap;
+}
+
+.service-price-from {
+		font-size: 0.78rem;
+		font-weight: 600;
+		color: var(--muted);
+		letter-spacing: 0.02em;
+}
+
+.service-includes {
+		list-style: none;
+		margin: 0;
+		padding: 0.9rem 0 0;
+		border-top: 1px solid var(--line);
+		display: grid;
+		gap: 0.5rem;
+		align-content: start;
+}
+
+.service-includes li,
+.maintenance-card li {
+		position: relative;
+		padding-left: 1.4rem;
+		font-size: 0.86rem;
+		line-height: 1.45;
+		color: #d3dbeb;
+}
+
+.service-includes li::before,
+.maintenance-card li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: #2ee676;
+		font-weight: 800;
+}
+
+.service-ideal {
+		margin: 0;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		color: var(--muted);
+}
+
+.service-ideal strong {
+		color: #e5e9f3;
+}
+
+.service-examples {
+		display: grid;
+		gap: 0.3rem;
+}
+
+.service-example-link {
+		color: var(--cyan);
+		font-size: 0.84rem;
+		font-weight: 700;
+		text-decoration: none;
+}
+
+.service-example-link:hover {
+		text-decoration: underline;
+}
+
+.service-cta {
+		margin-top: 0.4rem;
+		display: block;
+		text-align: center;
+		padding: 0.7rem;
+		border-radius: 10px;
+		font-size: 0.9rem;
+		font-weight: 700;
+		text-decoration: none;
+		color: #03140a;
+		background: linear-gradient(90deg, #25d366, #1ebea5);
+		transition: filter 0.15s ease;
+}
+
+.service-cta:hover {
+		filter: brightness(1.1);
+}
+
+.maintenance-card {
+		margin-top: 1.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+		padding: 1.3rem 1.5rem;
+		border-radius: 18px;
+		border: 1px dashed rgba(20, 215, 255, 0.35);
+		background: rgba(20, 215, 255, 0.04);
+}
+
+.maintenance-card h3 {
+		margin: 0 0 0.7rem;
+		font-size: 1.1rem;
+}
+
+.maintenance-card ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.4rem;
+}
+
+.services-terms {
+		margin: 1.4rem auto 0;
+		padding: 0;
+		list-style: none;
+		max-width: 760px;
+		text-align: center;
+		color: #8491aa;
+		font-size: 0.8rem;
+		line-height: 1.7;
+}
+
+@media (max-width: 1040px) {
+		.services-grid {
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				row-gap: 1.6rem;
+		}
+}
+
+@media (max-width: 640px) {
+		.services-grid {
+				grid-template-columns: 1fr;
+		}
+
+		.service-tagline {
+				min-height: 0;
+		}
+
+		.maintenance-card {
+				padding: 1.1rem;
+		}
+}
+
+.maintenance-price {
+		margin: 0;
+		display: grid;
+		justify-items: start;
+		font-size: 1.35rem;
+		font-weight: 800;
+		color: var(--cyan);
+}
+
+.maintenance-price span {
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: var(--muted);
+}
+
+.all-plans {
+		margin-top: 1.2rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+}
+
+.all-plans > div {
+		padding: 1.1rem 1.3rem;
+		border-radius: 16px;
+		border: 1px solid rgba(255, 157, 0, 0.3);
+		background: rgba(255, 157, 0, 0.05);
+}
+
+.all-plans h3 {
+		margin: 0 0 0.35rem;
+		font-size: 1rem;
+		color: #ffbe55;
+}
+
+.all-plans p {
+		margin: 0;
+		font-size: 0.88rem;
+		line-height: 1.55;
+		color: #d3dbeb;
+}
+
+@media (max-width: 640px) {
+		.all-plans {
+				grid-template-columns: 1fr;
+		}
+}
+
+/* Textos justificados (Contrataciones y Mis Desarrollos).
+   Los cortes de sílaba los inserta silabear() (hyphenate.ts) como guiones suaves,
+   así no quedan espacios grandes entre palabras en ningún navegador. */
+.all-plans p,
+.project-text-content p,
+.project-detail-description,
+.project-gallery-entry p {
+		text-align: justify;
+		hyphens: manual;
+		-webkit-hyphens: manual;
+		text-wrap: pretty;
+}
+
+/* Más ancho útil en las tarjetas de planes para que el justificado reparta mejor */
+.service-card {
+		padding-left: 1rem;
+		padding-right: 1rem;
+}
+
+.service-includes li {
+		padding-left: 1.15rem;
+}
+
+/* Los textos de las tarjetas de planes van alineados a la izquierda: son columnas angostas
+   y justificados dejan huecos grandes entre palabras. */
+.service-tagline,
+.service-includes li,
+.service-ideal,
+.service-price-note {
+		text-align: left;
+}
+
+/* "+ dominio" junto al precio */
+.service-price-domain {
+		margin-left: 0.4rem;
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0;
+		color: var(--muted);
+}
+
+/* Precios de dominios */
+.domains-box {
+		margin-top: 1.2rem;
+		padding: 1.3rem 1.5rem;
+		border-radius: 18px;
+		border: 1px solid rgba(20, 215, 255, 0.2);
+		background: var(--panel);
+}
+
+.domains-box h3 {
+		margin: 0 0 0.4rem;
+		font-size: 1.1rem;
+}
+
+.domains-box p {
+		margin: 0;
+		font-size: 0.88rem;
+		line-height: 1.55;
+		color: var(--muted);
+}
+
+.domains-box p strong {
+		color: #e5e9f3;
+}
+
+.domains-box ul {
+		list-style: none;
+		margin: 1rem 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.8rem;
+}
+
+.domains-box li {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 0.6rem;
+		padding: 0.8rem 1rem;
+		border-radius: 12px;
+		background: var(--panel-2);
+		border: 1px solid var(--line);
+		font-size: 0.95rem;
+}
+
+.domains-box li strong {
+		color: var(--cyan);
+}
+
+.domains-box li em {
+		font-style: normal;
+		font-weight: 800;
+		white-space: nowrap;
+}
+
+.domains-box li small {
+		font-weight: 500;
+		color: var(--muted);
+}
+
+.domains-box .domains-note {
+		font-size: 0.78rem;
+		color: #8491aa;
+}
+
+@media (max-width: 760px) {
+		.domains-box ul {
+				grid-template-columns: 1fr;
+		}
+}

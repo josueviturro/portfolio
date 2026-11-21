@@ -12,11 +12,13 @@ import icocshare from "../../assets/icons/cshare.png"
 import iconode from '../../assets/icons/NODE.png'
 import icovercel from '../../assets/icons/VERCEL.png'
 import icosupabase from '../../assets/icons/SUPABASE.png'
-import imagen from '../../assets/images/perfil.jpg'
+import imagen from '../../assets/images/perfil.webp'
 import linkedin from '/linkedin.png'
 import github from '/github.png'
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { projects } from './projects'
+import { silabear } from './hyphenate'
+import { services, maintenance, allPlans, terms, domains, whatsappLink, PRICES_UPDATED } from './services'
 
 
 
@@ -60,7 +62,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
           }
         });
       },
-      { threshold: 0.30 }
+      { threshold: 0.1 }
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
@@ -113,6 +115,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 					<a href="#inicio">Inicio</a>
 					<a href="#habilidades">Habilidades</a>
 					<a href="#proyectos">Proyectos</a>
+					<a href="#contrataciones">Contrataciones</a>
 					<a href="#contacto">Contacto</a>
 				</nav>
 
@@ -201,7 +204,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 									<h3>
 										<Link to={`/proyecto/${project.slug}`} className="project-title-link">{project.title}</Link>
 									</h3>
-									<p>{project.description}</p>
+									<p>{silabear(project.description)}</p>
 									<ul className="tags" aria-label={`Tecnolog\u00edas de ${project.title}`}>
 										{project.tags.map((tag) => (
 												<li key={tag}>{tag}</li>
@@ -212,6 +215,95 @@ const formRef = useRef<HTMLFormElement | null>(null);
 							</article>
 						))}
 					</div>
+				</section>
+
+				<section id="contrataciones" className="section services">
+					<h2 className="heading">Contrataciones</h2>
+					<div className="underline" aria-hidden="true" />
+					<p className="services-intro">
+						Desarrollo a medida para negocios y emprendimientos: desde tu primera página web hasta
+						un sistema completo. Trato directo conmigo, sin intermediarios, y soporte por WhatsApp.
+					</p>
+
+					<div className="services-grid">
+						{services.map((s) => (
+							<article className="service-card" key={s.id}>
+								<h3>{s.title}</h3>
+								<p className="service-tagline">{s.tagline}</p>
+								<p className="service-price">
+									{s.price}
+									{s.needsDomain && <span className="service-price-domain">+ dominio</span>}
+								</p>
+								{/* siempre se renderiza (vacío si no hay nota) para que las filas de todas las tarjetas coincidan */}
+								<p className="service-price-note">{s.priceNote && `* ${s.priceNote}`}</p>
+								<ul className="service-includes">
+									{s.includes.map((item) => (
+										<li key={item}>{item}</li>
+									))}
+								</ul>
+								<p className="service-ideal"><strong>Ideal para:</strong> {s.idealFor}</p>
+								<div className="service-examples">
+									{s.examples.map((ex) => (
+										<Link key={ex.to} to={ex.to} className="service-example-link">
+											{ex.label} &rarr;
+										</Link>
+									))}
+								</div>
+								<a
+									className="service-cta"
+									href={whatsappLink(`¡Hola Josué! Vi tu portfolio y me interesa: ${s.title}.`)}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Consultar por WhatsApp
+								</a>
+							</article>
+						))}
+					</div>
+
+					<div className="maintenance-card">
+						<div>
+							<h3>{maintenance.title}</h3>
+							<ul>
+								{maintenance.includes.map((item) => (
+									<li key={item}>{item}</li>
+								))}
+							</ul>
+						</div>
+						<p className="maintenance-price">
+							{maintenance.price}
+							<span>{maintenance.priceNote}</span>
+						</p>
+					</div>
+
+					<div className="all-plans">
+						{allPlans.map((p) => (
+							<div key={p.title}>
+								<h3>{p.title}</h3>
+								<p>{silabear(p.text)}</p>
+							</div>
+						))}
+					</div>
+
+					<div className="domains-box">
+						<h3>Precios de dominios</h3>
+						<p>Las webs necesitan un dominio propio (la dirección, por ejemplo <strong>tunegocio.com.ar</strong>), que se paga por año y queda siempre a tu nombre:</p>
+						<ul>
+							{domains.map((d) => (
+								<li key={d.ext}>
+									<span>tunegocio<strong>{d.ext}</strong></span>
+									<em>{d.price}<small> /año</small></em>
+								</li>
+							))}
+						</ul>
+						<p className="domains-note">Precios por año con IVA incluido, actualizados a {PRICES_UPDATED}. Pueden variar según el proveedor.</p>
+					</div>
+
+					<ul className="services-terms">
+						{terms.map((t) => (
+							<li key={t}>{t}</li>
+						))}
+					</ul>
 				</section>
 
 				<section id="contacto" className="section contact">
