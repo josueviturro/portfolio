@@ -2,22 +2,76 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/png" href="/JVicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Josué Viturro | Desarrollador Fullstack</title>
-		<meta name="description" content="Portfolio de Josué Viturro, desarrollador fullstack especializado en React, TypeScript, .NET y C#. Estudiante de Licenciatura en Sistemas en la UNLa." />
+		<link rel="icon" type="image/png" href="/JVicon.png" />
+		<link rel="apple-touch-icon" href="/JVicon.png" />
+		<meta name="theme-color" content="#05080f" />
+
+		<title>Josué Viturro | Desarrollador Fullstack · Páginas web para negocios</title>
+		<meta name="description" content="Desarrollador fullstack en Buenos Aires. Hago páginas web, sistemas de turnos y gestión y apps de escritorio para comercios y emprendimientos. React, TypeScript, Node.js y C#." />
 		<meta name="author" content="Josué Viturro" />
-		<meta name="keywords" content="desarrollador fullstack, React, TypeScript, .NET, C#, portfolio, Josué Viturro, Argentina" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://josueviturro.com/" />
+
+		<!-- Vista previa al compartir el link (WhatsApp, LinkedIn, Facebook, X) -->
 		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="es_AR" />
+		<meta property="og:site_name" content="Josué Viturro" />
 		<meta property="og:url" content="https://josueviturro.com/" />
 		<meta property="og:title" content="Josué Viturro | Desarrollador Fullstack" />
-		<meta property="og:description" content="Portfolio de Josué Viturro, desarrollador fullstack especializado en React, TypeScript, .NET y C#." />
-		<meta property="og:image" content="https://josueviturro.com/JVicon.png" />
-		<meta name="twitter:card" content="summary" />
+		<meta property="og:description" content="Páginas web, sistemas y apps de escritorio para negocios en Buenos Aires. Mirá mis proyectos y los planes con precios." />
+		<meta property="og:image" content="https://josueviturro.com/og-image.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Josué Viturro, desarrollador fullstack: páginas web, sistemas y apps para negocios" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Josué Viturro | Desarrollador Fullstack" />
-		<meta name="twitter:description" content="Portfolio de Josué Viturro, desarrollador fullstack especializado en React, TypeScript, .NET y C#." />
-		<meta name="twitter:image" content="https://josueviturro.com/JVicon.png" />
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<meta name="twitter:description" content="Páginas web, sistemas y apps de escritorio para negocios en Buenos Aires." />
+		<meta name="twitter:image" content="https://josueviturro.com/og-image.png" />
+
+		<!-- Datos estructurados para Google -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "Person",
+					"@id": "https://josueviturro.com/#persona",
+					"name": "Josué Viturro",
+					"jobTitle": "Desarrollador Fullstack",
+					"url": "https://josueviturro.com/",
+					"image": "https://josueviturro.com/og-image.png",
+					"address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" },
+					"alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Lanús" },
+					"knowsAbout": ["React", "TypeScript", "JavaScript", "Node.js", "C#", ".NET", "SQL", "Supabase", "Desarrollo web"],
+					"sameAs": [
+						"https://www.linkedin.com/in/josue-viturro/",
+						"https://github.com/josueviturro"
+					]
+				},
+				{
+					"@type": "ProfessionalService",
+					"@id": "https://josueviturro.com/#servicios",
+					"name": "Josué Viturro · Desarrollo web y software para negocios",
+					"url": "https://josueviturro.com/#contrataciones",
+					"image": "https://josueviturro.com/og-image.png",
+					"founder": { "@id": "https://josueviturro.com/#persona" },
+					"areaServed": { "@type": "City", "name": "Buenos Aires" },
+					"priceRange": "$150.000 - $500.000",
+					"hasOfferCatalog": {
+						"@type": "OfferCatalog",
+						"name": "Planes",
+						"itemListElement": [
+							{ "@type": "Offer", "price": "150000", "priceCurrency": "ARS", "itemOffered": { "@type": "Service", "name": "Landing page para negocios" } },
+							{ "@type": "Offer", "price": "300000", "priceCurrency": "ARS", "itemOffered": { "@type": "Service", "name": "Web institucional" } },
+							{ "@type": "Offer", "price": "500000", "priceCurrency": "ARS", "itemOffered": { "@type": "Service", "name": "Web con sistema de turnos, pedidos o gestión" } },
+							{ "@type": "Offer", "price": "300000", "priceCurrency": "ARS", "itemOffered": { "@type": "Service", "name": "Aplicación de escritorio a medida (precio desde)" } }
+						]
+					}
+				}
+			]
+		}
+		</script>
 	</head>
 	<body>
 		<div id="root"></div>

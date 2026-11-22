@@ -5,6 +5,7 @@ import { projects } from './projects'
 import { silabear } from './hyphenate'
 import { techIcons } from './techIcons'
 import { galleryDescriptions, type GalleryImage } from './galleryDescriptions'
+import { usePageMeta } from '../../usePageMeta'
 
 const galleryImages = import.meta.glob<string>(
 	'../../assets/images/proyectimages/*/*.{png,jpg,jpeg,webp,mp4}',
@@ -13,11 +14,22 @@ const galleryImages = import.meta.glob<string>(
 
 const isVideo = (file: string) => file.toLowerCase().endsWith('.mp4')
 
+// Corta en el último espacio antes del límite para no partir palabras en la descripción de Google.
+const recortar = (texto: string, max: number) =>
+	texto.length <= max ? texto : texto.slice(0, texto.lastIndexOf(' ', max - 1)).replace(/[,:;]$/, '') + '…'
+
 export default function ProjectDetailPage() {
 	const { slug } = useParams<{ slug: string }>()
 	const project = projects.find((p) => p.slug === slug)
 	const gallery = slug ? galleryDescriptions[slug] : undefined
 	const [activeShot, setActiveShot] = useState<(GalleryImage & { src: string }) | null>(null)
+
+	usePageMeta({
+		title: project ? `${project.title} · Proyecto de Josué Viturro` : 'Proyecto no encontrado · Josué Viturro',
+		description: project ? recortar(project.description, 155) : undefined,
+		path: project ? `/proyecto/${project.slug}` : undefined,
+		noindex: !project,
+	})
 
 	useEffect(() => {
 		if (!activeShot) return

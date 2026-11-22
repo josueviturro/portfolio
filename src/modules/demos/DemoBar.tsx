@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { usePageMeta } from '../../usePageMeta'
 import { whatsappLink } from '../portfolio/services'
 import './DemoBar.css'
 
@@ -9,11 +9,8 @@ type Props = {
 
 // Barra fija arriba de cada demo: aclara que es un ejemplo y lleva a contratar.
 export default function DemoBar({ service, pageTitle }: Props) {
-	useEffect(() => {
-		const prev = document.title
-		document.title = `${pageTitle} · Demo de Josué Viturro`
-		return () => { document.title = prev }
-	}, [pageTitle])
+	// noindex: son negocios ficticios, no queremos que aparezcan en Google como si fueran reales
+	usePageMeta({ title: `${pageTitle} · Demo de Josué Viturro`, noindex: true })
 
 	return (
 		<div className="demo-bar" role="note">
