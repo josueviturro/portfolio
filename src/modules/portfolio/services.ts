@@ -13,6 +13,7 @@ export type Service = {
 	tagline: string
 	price: string
 	priceNote?: string
+	priceFrom?: boolean
 	includes: string[]
 	idealFor: string
 	examples: { label: string; to: string }[]
@@ -85,7 +86,8 @@ export const services: Service[] = [
 		id: 'escritorio',
 		title: 'Aplicación de escritorio',
 		tagline: 'Software a medida para la PC de tu negocio, funciona aunque se corte internet.',
-		price: '$500.000',
+		price: '$300.000',
+		priceFrom: true,
 		priceNote: 'Si requiere hardware, se suma el costo de los componentes.',
 		includes: [
 			'Gestión de clientes, stock, caja o personal según tu negocio',

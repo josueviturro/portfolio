@@ -231,6 +231,7 @@ const formRef = useRef<HTMLFormElement | null>(null);
 								<h3>{s.title}</h3>
 								<p className="service-tagline">{s.tagline}</p>
 								<p className="service-price">
+									{s.priceFrom && <span className="service-price-from">desde </span>}
 									{s.price}
 									{s.needsDomain && <span className="service-price-domain">+ dominio</span>}
 								</p>
